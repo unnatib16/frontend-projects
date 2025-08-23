@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding-inline: 1.1em;
+  padding-block: 4em;
+  background-image: url("images/himalaya.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.accordion-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 20px 0px rgba(0,0,0,0.3);
+}
+
+.accordion-title {
+  text-align: center;
+  color: #204263;
+  margin-bottom: 30px;
+  font-size: 2.6em;
+  font-weight: bold;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.accordion-item {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.accordion-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 18px 24px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+}
+
+.accordion-header h3 {
+  margin: 0;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.accordion-icon {
+  font-size: 1.3em;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.114);
+  padding-inline: 12px;
+  padding-block: 6px;
+  border-radius: 50%;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+}
+
+.accordion-content.active {
+  max-height: 300px;
+}
+
+.accordion-text {
+  padding: 24px;
+  color: #1c2734;
+  line-height: 1.7;
+  font-size: 1.3em;
+}
+
+.accordion-item.active .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-item.active .accordion-header {
+  background: linear-gradient(135deg, #162d41 0%, #0a1e1f 100%);
+}
