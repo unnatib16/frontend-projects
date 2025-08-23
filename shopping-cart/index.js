@@ -1,5 +1,3 @@
-
-
 const productListContainer = document.getElementById("product-list");
 const totalPriceElement = document.getElementById("total-price");
 
