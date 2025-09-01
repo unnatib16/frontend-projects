@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieHub - Find Great Restaurants</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🍽️ FoodieHub</h1>
+            <button id="backBtn" class="back-btn hidden">← Back to Restaurants</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Restaurant List Page -->
+        <div id="restaurantList" class="restaurant-list">
+            <h2 class="page-title">Discover Amazing Restaurants</h2>
+            <div class="restaurant-grid">
+                
+                <!-- Restaurant Card 1 -->
+                <div class="restaurant-card" data-restaurant="bella-vista">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=400&h=300&fit=crop" alt="Bella Vista Italian" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Bella Vista Italian</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-number">4.8</span>
+                        </div>
+                        <div class="card-cuisines">
+                            <span class="cuisine-tag">Italian</span>
+                            <span class="cuisine-tag">Pizza</span>
+                        </div>
+                        <div class="card-location">
+                            <span>📍</span>
+                            Downtown, New York
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 2 -->
+                <div class="restaurant-card" data-restaurant="sakura-sushi">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=400&h=300&fit=crop" alt="Sakura Sushi House" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Sakura Sushi House</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-number">4.9</span>
+                        </div>
+                        <div class="card-cuisines">
+                            <span class="cuisine-tag">Japanese</span>
+                            <span class="cuisine-tag">Sushi</span>
+                        </div>
+                        <div class="card-location">
+                            <span>📍</span>
+                            Little Tokyo, Los Angeles
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 3 -->
+                <div class="restaurant-card" data-restaurant="spice-garden">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=400&h=300&fit=crop" alt="Spice Garden Indian" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Spice Garden Indian</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-number">4.6</span>
+                        </div>
+                        <div class="card-cuisines">
+                            <span class="cuisine-tag">Indian</span>
+                            <span class="cuisine-tag">Curry</span>
+                        </div>
+                        <div class="card-location">
+                            <span>📍</span>
+                            Curry Hill, Manhattan
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 4 -->
+                <div class="restaurant-card" data-restaurant="le-petit-bistro">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop" alt="Le Petit Bistro" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Le Petit Bistro</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-number">4.7</span>
+                        </div>
+                        <div class="card-cuisines">
+                            <span class="cuisine-tag">French</span>
+                            <span class="cuisine-tag">Wine</span>
+                        </div>
+                        <div class="card-location">
+                            <span>📍</span>
+                            French Quarter, Chicago
+                        </div>
+                    </div>
+                </div>
+
+                <!--Restaurant Card 5
+                <div class="restaurant-card" data-restaurant="taco-libre">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=400&h=300&fit=crop" alt="Taco Libre Mexican" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Taco Libre Mexican</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-number">4.5</span>
+                        </div>
+                        <div class="card-cuisines">
+                            <span class="cuisine-tag">Mexican</span>
+                            <span class="cuisine-tag">Tacos</span>
+                        </div>
+                        <div class="card-location">
+                            <span>📍</span>
+                            Mission District, San Francisco
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant Card 6 -->
+                <div class="restaurant-card" data-restaurant="oceans-bounty">
+                    <div class="card-image">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=300&fit=crop" alt="Ocean's Bounty Seafood" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Ocean's Bounty Seafood</h3>
+                        <div class="card-rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-number">4.8</span>
+                        </div>
+                        <div class="card-cuisines">
+                            <span class="cuisine-tag">Seafood</span>
+                            <span class="cuisine-tag">Lobster</span>
+                        </div>
+                        <div class="card-location">
+                            <span>📍</span>
+                            Waterfront, Seattle
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>-->
+
+        <!-- Restaurant Details Pages -->
+        
+        <!-- Bella Vista Details -->
+        <div id="bella-vista" class="restaurant-details hidden">
+            <div class="restaurant-hero">
+                <img class="cover-photo" src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&h=400&fit=crop" alt="Bella Vista Italian">
+                <div class="hero-overlay">
+                    <h1 class="restaurant-name">Bella Vista Italian</h1>
+                    <div class="rating-large">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.8 / 5.0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="restaurant-info">
+                <div class="info-section">
+                    <h3>About</h3>
+                    <p class="description">Experience authentic Italian cuisine in the heart of the city. Our chef brings traditional recipes from Naples with fresh ingredients and a modern twist. From handmade pasta to wood-fired pizzas, every dish tells a story of Italian culinary heritage.</p>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-section">
+                        <h3>📍 Location</h3>
+                        <p>Downtown, New York</p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>🍴 Popular Cuisines</h3>
+                        <div class="cuisines-tags">
+                            <span class="cuisine-tag">Italian</span>
+                            <span class="cuisine-tag">Pizza</span>
+                            <span class="cuisine-tag">Pasta</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sakura Sushi Details -->
+        <div id="sakura-sushi" class="restaurant-details hidden">
+            <div class="restaurant-hero">
+                <img class="cover-photo" src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&h=400&fit=crop" alt="Sakura Sushi House">
+                <div class="hero-overlay">
+                    <h1 class="restaurant-name">Sakura Sushi House</h1>
+                    <div class="rating-large">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.9 / 5.0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="restaurant-info">
+                <div class="info-section">
+                    <h3>About</h3>
+                    <p class="description">Immerse yourself in an authentic Japanese dining experience. Our master sushi chef trained in Tokyo for over 15 years, bringing traditional techniques and the freshest fish. From omakase to classic rolls, every piece is crafted with precision and artistry.</p>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-section">
+                        <h3>📍 Location</h3>
+                        <p>Little Tokyo, Los Angeles</p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>🍴 Popular Cuisines</h3>
+                        <div class="cuisines-tags">
+                            <span class="cuisine-tag">Japanese</span>
+                            <span class="cuisine-tag">Sushi</span>
+                            <span class="cuisine-tag">Ramen</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Spice Garden Details -->
+        <div id="spice-garden" class="restaurant-details hidden">
+            <div class="restaurant-hero">
+                <img class="cover-photo" src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=800&h=400&fit=crop" alt="Spice Garden Indian">
+                <div class="hero-overlay">
+                    <h1 class="restaurant-name">Spice Garden Indian</h1>
+                    <div class="rating-large">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.6 / 5.0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="restaurant-info">
+                <div class="info-section">
+                    <h3>About</h3>
+                    <p class="description">Journey through the diverse flavors of India with our extensive menu featuring regional specialties. From creamy butter chicken to spicy vindaloo, our chefs use traditional spice blends and cooking methods passed down through generations.</p>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-section">
+                        <h3>📍 Location</h3>
+                        <p>Curry Hill, Manhattan</p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>🍴 Popular Cuisines</h3>
+                        <div class="cuisines-tags">
+                            <span class="cuisine-tag">Indian</span>
+                            <span class="cuisine-tag">Curry</span>
+                            <span class="cuisine-tag">Tandoor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Le Petit Bistro Details -->
+        <div id="le-petit-bistro" class="restaurant-details hidden">
+            <div class="restaurant-hero">
+                <img class="cover-photo" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&h=400&fit=crop" alt="Le Petit Bistro">
+                <div class="hero-overlay">
+                    <h1 class="restaurant-name">Le Petit Bistro</h1>
+                    <div class="rating-large">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.7 / 5.0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="restaurant-info">
+                <div class="info-section">
+                    <h3>About</h3>
+                    <p class="description">Step into a charming Parisian-style bistro where classic French cuisine meets contemporary flair. Our seasonal menu features locally sourced ingredients prepared with traditional French techniques, complemented by an extensive wine selection.</p>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-section">
+                        <h3>📍 Location</h3>
+                        <p>French Quarter, Chicago</p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>🍴 Popular Cuisines</h3>
+                        <div class="cuisines-tags">
+                            <span class="cuisine-tag">French</span>
+                            <span class="cuisine-tag">Wine</span>
+                            <span class="cuisine-tag">Pastry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Taco Libre Details -->
+        <div id="taco-libre" class="restaurant-details hidden">
+            <div class="restaurant-hero">
+                <img class="cover-photo" src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?w=800&h=400&fit=crop" alt="Taco Libre Mexican">
+                <div class="hero-overlay">
+                    <h1 class="restaurant-name">Taco Libre Mexican</h1>
+                    <div class="rating-large">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-number">4.5 / 5.0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="restaurant-info">
+                <div class="info-section">
+                    <h3>About</h3>
+                    <p class="description">Vibrant Mexican flavors come alive in our colorful cantina. From street-style tacos to gourmet enchiladas, we use family recipes and the freshest ingredients. Don't miss our famous margaritas made with premium tequila and fresh lime.</p>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-section">
+                        <h3>📍 Location</h3>
+                        <p>Mission District, San Francisco</p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>🍴 Popular Cuisines</h3>
+                        <div class="cuisines-tags">
+                            <span class="cuisine-tag">Mexican</span>
+                            <span class="cuisine-tag">Tacos</span>
+                            <span class="cuisine-tag">Margaritas</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ocean's Bounty Details -->
+        <div id="oceans-bounty" class="restaurant-details hidden">
+            <div class="restaurant-hero">
+                <img class="cover-photo" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=400&fit=crop" alt="Ocean's Bounty Seafood">
+                <div class="hero-overlay">
+                    <h1 class="restaurant-name">Ocean's Bounty Seafood</h1>
+                    <div class="rating-large">
+                        <span class="stars">★★★★★</span>
+                        <span class="rating-number">4.8 / 5.0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="restaurant-info">
+                <div class="info-section">
+                    <h3>About</h3>
+                    <p class="description">Fresh from the Pacific, our seafood restaurant offers the finest catch of the day. From succulent Dungeness crab to perfectly grilled salmon, every dish showcases the ocean's bounty. Enjoy panoramic waterfront views while dining.</p>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-section">
+                        <h3>📍 Location</h3>
+                        <p>Waterfront, Seattle</p>
+                    </div>
+                    
+                    <div class="info-section">
+                        <h3>🍴 Popular Cuisines</h3>
+                        <div class="cuisines-tags">
+                            <span class="cuisine-tag">Seafood</span>
+                            <span class="cuisine-tag">Lobster</span>
+                            <span class="cuisine-tag">Oysters</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

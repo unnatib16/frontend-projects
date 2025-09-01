@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Profile Card</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="profile-card">
+      <div class="profile-header">
+        <div class="profile-picture" id="profilePicture">UB</div>
+      </div>
+        
+      <div class="profile-content">
+        <div class="success-message" id="successMessage">
+          Profile updated successfully
+        </div>
+
+        <!-- View Mode -->
+        <div class="view-mode" id="viewMode">
+          <h1 class="profile-name" id="displayName">Unnati Bansal</h1>
+          <div class="profile-location" id="displayLocation">New Mexico, ABQ</div>
+          <div class="profile-email" id="displayEmail">walter52@gmail.com</div>
+          <div class="profile-bio" id="displayBio">
+            Passionate about creating user-friendly web applications with modern technologies. 5+ years of experience in JavaScript, React, and Node.js. Love solving complex problems and contributing to open-source projects.
+          </div>
+          <button class="edit-button" onclick="toggleEditMode()">Edit Profile</button>
+        </div>
+
+        <!-- Edit Mode -->
+        <div class="edit-mode" id="editMode">
+          <form id="profileForm">
+            <div class="form-group">
+              <label class="form-label" for="editName">Full Name *</label>
+              <input type="text" id="editName" class="form-input" required>
+            </div>
+              
+            <div class="form-group">
+              <label class="form-label" for="editLocation">Location</label>
+              <input type="text" id="editLocation" class="form-input">
+            </div>
+              
+            <div class="form-group">
+              <label class="form-label" for="editEmail">Email *</label>
+              <input type="email" id="editEmail" class="form-input" required>
+            </div>
+              
+            <div class="form-group">
+              <label class="form-label" for="editBio">Bio</label>
+              <textarea 
+                id="editBio" 
+                class="form-input form-textarea" 
+                placeholder="Tell us about yourself...">
+              </textarea>
+            </div>
+              
+            <div class="button-group">
+              <button type="submit" class="save-button">Save Changes</button>
+              <button type="button" class="cancel-button" onclick="cancelEdit()">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
